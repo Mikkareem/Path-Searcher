@@ -97,8 +97,6 @@ const Board = props => {
     setgrid(newGrid);
   };
 
-  console.log(grid);
-
   return (
     <React.Fragment>
       <div className="buttons">

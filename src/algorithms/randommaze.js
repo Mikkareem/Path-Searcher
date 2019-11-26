@@ -6,9 +6,6 @@ export const randommaze = grid => {
     let row = Math.floor(Math.random() * rows);
     let col = Math.floor(Math.random() * columns);
     let currentNode = grid[row][col];
-    // if (currentNode.isWall) {
-    //   console.log(document.getElementById(`node-${row}-${col}`));
-    // }
     if (!currentNode.isStart && !currentNode.isFinish && !currentNode.isWall) {
       currentNode.isWall = true;
       walls.push(currentNode);
