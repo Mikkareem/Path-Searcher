@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: whitesmoke;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #202060;
+}
+
+table {
+  margin: 30px auto;
+  border: solid 2px black;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+td {
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  border: solid 1px #9900e6;
+  color: whitesmoke;
+  font-weight: 700;
+}
+
+.header {
+  background: #666699;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+}
+
+.header h1 {
+  font-size: 50px;
+  box-sizing: border-box;
+}
+
+.header label {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+.header label select {
+  margin: 5px;
+  display: block;
+  width: 130px;
+  height: 30px;
+  background: #ff6666;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.header label select:hover {
+  background: black;
+}
+
+.header label select option {
+  font-size: 1rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.buttons button {
+  height: 40px;
+  background-color: #4dff88;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  color: whitesmoke;
+  background-color: black;
+}
+.buttons button:disabled {
+  color: rgba(0, 0, 0, 0.5);
+  background-color: #b30000;
+  cursor: not-allowed;
+}
+
+.buttons button:nth-child(4) {
+  width: 80px;
+}
+
+.node-start {
+  background: #ff9900;
+}
+
+.node-finish {
+  background: #bf4080;
+}
+
+.node-wall {
+  background: rgba(0, 0, 0, 0.7);
+  animation-name: wallnode;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-duration: 1.5s;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
+}
+
+.node-visited {
+  animation-name: visited-node;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-direction: alternate;
+  animation-duration: 1.5s;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
+}
+
+.node-shortest-path {
+  background: #ff3385;
+  border: none;
+}
+
+@keyframes visited-node {
+  0% {
+    transform: scale(0.3);
+    background-color: rgba(57, 175, 214, 0.25);
+    border-radius: 100%;
+  }
+  50% {
+    background-color: rgba(57, 175, 214, 0.5);
+  }
+  70% {
+    transform: scale(1.2);
+    background-color: rgba(57, 175, 214, 0.75);
+  }
+  100% {
+    transform: scale(1);
+    background-color: rgb(57, 175, 214);
+    border: solid 1px rgb(57, 175, 214);
+  }
+}
+
+@keyframes wallnode {
+  from {
+    transform: scale(0);
+    border: solid 1px lightblue;
+  }
+  to {
+    transform: scale(1);
+    border: none;
+  }
+}
