@@ -1,3 +1,5 @@
+The Project is available in the URL -> (https://mikkareem.github.io/Path-Searcher/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
